@@ -20,5 +20,7 @@ body3.style.background = 'red';
 /** Não recomendado */
 
 // non-null assertion (!)
+/*
 const body2 = document.querySelector('body')!; // '!' indica que esse objeto não pode ser nulo
 body2.style.background = 'red';
+*/
