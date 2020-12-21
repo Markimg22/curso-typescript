@@ -20,5 +20,5 @@ const person_one: {
   country: 'Brazil',
 };
 
-// person_one.name = 'André'; // 'readonly' não pode ser alterada
+// person_one.name = 'André'; // 'readonly' não pode ser alterada, torna imutável
 console.log(person_one);
