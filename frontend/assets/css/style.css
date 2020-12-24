@@ -1,15 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1rem;
-  font-family: sans-serif;
-  background-color: black;
-}
+@import './roots.css';
+@import './global.css';
+@import './container.css';
+@import './form.css';

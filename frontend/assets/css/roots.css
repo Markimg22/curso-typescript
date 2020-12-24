@@ -1,0 +1,9 @@
+:root {
+  --dark-color: #111;
+  --light-color: #f3f3f3;
+  --medium-color: #bbb;
+  --border-color: #ddd;
+  --main-color: #0074D9;
+  --error-color: #FF4136;
+  --border-radius: 4px;
+}
