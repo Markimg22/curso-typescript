@@ -1,9 +1,10 @@
 /** Pilares da Programação Orientada a Objetos */
 
-/** Abstração: */
-
-// Permite isolar de um objeto somente os conceitos que são necessários
-// para o funcionamento do programa.
+/** Abstração:
+ *
+ * Permite isolar de um objeto somente os conceitos que são necessários
+ * para o funcionamento do programa.
+ */
 
 export class Pessoas {
   private name: string;
@@ -15,10 +16,11 @@ export class Pessoas {
   }
 }
 
-/** Encapsulamento */
-
-// Visa ocultar partes internas de um objeto e exibir apenas o necessário
-// para o uso externo.
+/** Encapsulamento:
+ *
+ * Visa ocultar partes internas de um objeto e exibir apenas o necessário
+ * para o uso externo
+ */
 
 export class RemoteControl {
   constructor(private powerStatus = false) {}
@@ -36,9 +38,10 @@ export class RemoteControl {
   }
 }
 
-/** Herança */
-
-// Visa passar características de um objeto para outro.
+/** Herança:
+ *
+ * Visa passar características de um objeto para outro.
+ */
 
 export abstract class Animal {
   constructor(public name: string) {}
@@ -57,10 +60,11 @@ export class Cat extends Animal {
   }
 }
 
-/** Polimorfismo */
-
-// Algo que é polimorfo tem a habilidade de assumir diferentes formas.
-// Mesmo método, porém retorna algo diferente.
+/** Polimorfismo
+ *
+ * Algo que é polimorfo tem a habilidade de assumir diferentes formas.
+ * Mesmo método, porém retorna algo diferente.
+ */
 
 class AnimalSounds {
   public playSound(animal: Animal): void {
