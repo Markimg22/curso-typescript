@@ -2,18 +2,20 @@ export class Students {
   constructor(
     private name: string,
     private lastName: string,
-    private cpf: string,
+    private _cpf: string,
     private age: number,
   ) {}
 
-  public setName(name: string): void {
-    this.name = name;
+  set cpf(cpf: string) {
+    this._cpf = cpf;
   }
 
-  public getName(): string {
-    return this.name;
+  get cpf(): string {
+    return this._cpf;
   }
 }
 
-const studentOne = new Students('Marcos', 'Campos', '123123123', 20);
-console.log(studentOne.getName());
+const studentOne = new Students('Marcos', 'Campos', '', 20);
+studentOne.cpf = '12312319231';
+
+console.log(studentOne.cpf);
