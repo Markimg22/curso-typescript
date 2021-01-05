@@ -1,6 +1,8 @@
 /** Associação entre Classes:
  *
- * Exemplo:
+ * Mostrar que uma classe tem ligação com outra.
+ * Uma ligação fraca entre as classes, logo, uma não depende totalmente
+ * da outra para funcionar.
  */
 
 export class Writer {
