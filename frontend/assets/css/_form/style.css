@@ -1,4 +1,4 @@
-@import './roots.css';
-@import './global.css';
+@import '../roots.css';
+@import '../global.css';
 @import './container.css';
 @import './form.css';

@@ -1,0 +1,21 @@
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.controls button {
+  margin: 0;
+  padding: 0;
+  background: var(--main-color);
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  opacity: .5;
+  cursor: pointer;
+  transition: opacity 300ms ease-in-out;
+}
+
+.controls button:hover {
+  opacity: 1;
+}
