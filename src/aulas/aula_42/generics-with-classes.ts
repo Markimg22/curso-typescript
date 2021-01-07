@@ -50,6 +50,7 @@ export class Stack<T> {
   }
 }
 
+// o tipo só será inferindo quando especificamos aqui.
 const stack = new Stack<number>();
 
 stack.push(1);
