@@ -18,6 +18,7 @@ export class Animal {
 function decorator<T extends new (...args: any[]) => any>(target: T): T {
   console.log('Classe Decorator');
 
+  // classe anônima
   return class extends target {
     color: string;
 
