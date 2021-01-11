@@ -1,14 +1,14 @@
-/** Decorators Factories:
- *
- * Uma maneira de passar parâmetros para os nossos decorators.
- *
- * Usando o 'Closure':
- * uma função que recebe os parâmetros e retorna o decorator anônimo.
+/** Composition Decorator:
+ * podemos fazer composições de mais decoradores.
  */
+
+interface Constructor {
+  new (...args: any[]): any;
+}
 
 function reverseNameAndColor(param1: string, param2: string) {
   // Closure
-  return function <T extends new (...args: any[]) => any>(target: T): T {
+  return function (target: Constructor) {
     console.log('Sou o decorador e recebi: ', target);
 
     return class extends target {
@@ -28,6 +28,12 @@ function reverseNameAndColor(param1: string, param2: string) {
   };
 }
 
+function outherDecorator(target: Constructor) {
+  console.log('Outro decorator');
+  return target;
+}
+
+@outherDecorator
 @reverseNameAndColor('Valor1', 'Valor2')
 export class Animal {
   constructor(public name: string, public color: string) {
