@@ -1,22 +1,17 @@
 /** Decorator Parameter:
  *
  * Só funciona para assitir o parâmetro, saber oque ele é, e o que tem.
+ * Não funciona para alterar valor.
  */
 
 function decorator(
   classPrototype: any,
-  nameMethod: string,
-  descriptor: PropertyDescriptor,
-): PropertyDescriptor | void {
+  nameMethod: string | symbol,
+  index: number,
+): any {
   console.log(classPrototype);
   console.log(nameMethod);
-  console.log(descriptor);
-
-  return {
-    value: function (...args: string[]) {
-      return args[0].toLocaleUpperCase();
-    },
-  };
+  console.log(index);
 }
 
 export class OnePeople {
@@ -30,8 +25,8 @@ export class OnePeople {
     this.age = age;
   }
 
-  @decorator
-  method(msg: string): string {
+  // decorando parâmetro
+  method(@decorator msg: string): string {
     return `${this.name} ${this.lastName}: ${msg}`;
   }
 
